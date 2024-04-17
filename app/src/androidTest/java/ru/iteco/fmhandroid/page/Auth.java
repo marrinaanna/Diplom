@@ -18,8 +18,8 @@ import androidx.test.espresso.ViewInteraction;
 import io.qameta.allure.kotlin.Allure;
 import ru.iteco.fmhandroid.R;
 
-import ru.iteco.fmhandroid.data.dataHeplper;
-import static ru.iteco.fmhandroid.data.dataHeplper.*;
+import ru.iteco.fmhandroid.data.dataHelper;
+import static ru.iteco.fmhandroid.data.dataHelper.*;
 
 public class Auth {
     ViewInteraction screenName =
@@ -51,8 +51,8 @@ public class Auth {
     public void login() {
         Allure.step("Login");
         isAuthScreen();
-        enterLogin(dataHeplper.AuthInfo.validAuth().getLogin());
-        enterPassword(dataHeplper.AuthInfo.validAuth().getPass());
+        enterLogin(dataHelper.AuthInfo.validAuth().getLogin());
+        enterPassword(dataHelper.AuthInfo.validAuth().getPass());
         signIn();
         mainScreenPage.checkMainScreenLoaded();
         mainScreenPage.isMainScreen();

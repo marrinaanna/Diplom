@@ -3,22 +3,22 @@ package ru.iteco.fmhandroid.data;
 
 import android.os.SystemClock;
 
-import ru.netology.pages.AuthPage;
-import ru.netology.pages.ClaimPage;
-import ru.netology.pages.ClaimsPage;
-import ru.netology.pages.ControlPanelPage;
-import ru.netology.pages.MainScreenPage;
-import ru.netology.pages.NewsPage;
-import ru.netology.pages.OurMissionPage;
+import ru.iteco.fmhandroid.page.Auth;
+import ru.iteco.fmhandroid.page.Claim;
+import ru.iteco.fmhandroid.page.Claims;
+import ru.iteco.fmhandroid.page.Controlpanel;
+import ru.iteco.fmhandroid.page.Main;
+import ru.iteco.fmhandroid.page.News;
+import ru.iteco.fmhandroid.page.OurMission;
 
 public class screenLoad {
-    AuthPage authPage = new AuthPage();
-    MainScreenPage mainScreenPage = new MainScreenPage();
-    ClaimPage claimPage = new ClaimPage();
-    ClaimsPage claimsPage = new ClaimsPage();
-    NewsPage newsPage = new NewsPage();
-    ControlPanelPage controlPanelPage = new ControlPanelPage();
-    OurMissionPage ourMissionPage = new OurMissionPage();
+    Auth authPage = new Auth();
+    Main mainScreenPage = new Main();
+    Claim claimPage = new Claim();
+    Claims claimsPage = new Claims();
+    News newsPage = new News();
+    Controlpanel controlPanelPage = new Controlpanel();
+    OurMission ourMissionPage = new OurMission();
 
     public void readyAuthScreen() {
         SystemClock.sleep(5000);

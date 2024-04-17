@@ -37,12 +37,11 @@ import org.hamcrest.TypeSafeMatcher;
 
 import java.util.concurrent.TimeoutException;
 
-//import io.bloco.faker.Faker;
 
 
-public class dataHeplper {
+public class dataHelper {
 
-    public dataHeplper() {
+    public dataHelper() {
     }
 
     public static class AuthInfo {
@@ -81,14 +80,14 @@ public class dataHeplper {
         }
 
         public static AuthInfo wrongLogin() {
-            String login = "!@";
+            String login = "90";
             String pass = "password2";
             return new AuthInfo(login, pass);
         }
 
         public static AuthInfo wrongPassword() {
             String login = "login2";
-            String pass = "@!";
+            String pass = "90";
             return new AuthInfo(login, pass);
         }
     }
