@@ -19,6 +19,7 @@ import androidx.test.filters.LargeTest;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.ClassRule;
 import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
@@ -41,38 +42,31 @@ import ru.iteco.fmhandroid.ui.AppActivity;
 
 public class NewsUnitTest {
     News newsPage = new News();
-    Controlpanel controlPanelPage = new Controlpanel();
+    static Controlpanel controlPanelPage = new Controlpanel();
     Filters filterNewsPage = new Filters();
-    someData dat = new someData();
-    screenLoad readyScreen = new screenLoad();
-    CreatAndEditNews createEditNewsPage = new CreatAndEditNews();
-    String category = dat.category;
-    String title = dat.title;
-    String description = dat.description;
-    String date = dat.date;
-    String time = dat.time;
-    String category2 = dat.category2;
-    String title2 = dat.title2;
-    String description2 = dat.description2;
-    String date2 = dat.date2;
-    String time2 = dat.time2;
+    static someData dat = new someData();
+    static screenLoad readyScreen = new screenLoad();
+    static CreatAndEditNews createEditNewsPage = new CreatAndEditNews();
+    static String category = dat.category;
+    static String title = dat.title;
+    static String description = dat.description;
+    static String date = dat.date;
+    static String time = dat.time;
+    static String category2 = dat.category2;
+    static String title2 = dat.title2;
+    static String description2 = dat.description2;
+    static String date2 = dat.date2;
+    static String time2 = dat.time2;
 
-    @Rule
-    public ActivityScenarioRule<AppActivity> mActivityScenarioRule =
+    @ClassRule
+    public static ActivityScenarioRule<AppActivity> mActivityScenarioRule =
             new ActivityScenarioRule<>(AppActivity.class);
-
-    @Before
-    public void readyScreen() {
+    @Rule
+    public ActivityScenarioRule<AppActivity> mActivityScenarioRule2 =
+            new ActivityScenarioRule<>(AppActivity.class);
+    @BeforeClass
+    public static void readyScreen() {
         readyScreen.readyNewsScreen();
-    }
-
-
-    String startDate = dat.startDate;
-    String endDate = dat.endDate;
-
-    @Test
-    @DisplayName("News: Фильтр по дате")
-    public void testSortNews() {
         controlPanelPage.addNewsButton.perform(click());
         controlPanelPage.createNewsButton.perform(click());
         createEditNewsPage.checkCreateNewsScreenLoaded();
@@ -86,6 +80,19 @@ public class NewsUnitTest {
         createEditNewsPage.checkEditNewsScreenLoaded();
         createEditNewsPage.switcher.perform(click());
         createEditNewsPage.saveNews();
+    }
+    @Before
+    public void readyScreen2() {
+        readyScreen.readyNewsScreen();
+    }
+
+    String startDate = dat.startDate;
+    String endDate = dat.endDate;
+
+    @Test
+    @DisplayName("News: Фильтр по дате")
+    public void testSortNews() {
+
         controlPanelPage.newsFilterButton.perform(click());
         filterNewsPage.checkFilterNewsScreenLoaded();
         filterNewsPage.startDateField.perform(replaceText(startDate));
