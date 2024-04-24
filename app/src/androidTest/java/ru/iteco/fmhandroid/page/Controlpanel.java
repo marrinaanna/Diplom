@@ -59,7 +59,7 @@ public class Controlpanel{
 
     public void checkListNewsLoaded() {
         Allure.step("Проверка загрузки списка новостей");
-        elementWaiting(withId(R.id.news_list_recycler_view), 5000);
+        elementWaiting(withId(R.id.news_list_recycler_view), 10000);
     }
 
     public void checkItemScreenLoaded() {

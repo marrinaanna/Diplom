@@ -56,7 +56,7 @@ public class CreatAndEditNews {
 
     public void checkEditNewsScreenLoaded() {
         Allure.step("Проверка загрузки экарана редактирования новости");
-        elementWaiting(withText("Editing"), 5000);
+        elementWaiting(withText("Editing"), 10000);
         editingNewsScreenName.check(matches(isDisplayed()));
         newsScreenName.check(matches(isDisplayed()));
         categoryField.check(matches(isDisplayed()));

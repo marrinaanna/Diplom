@@ -1,0 +1,117 @@
+{
+    "name": "testAuthValidInfo",
+    "start": 1713373854647,
+    "stop": 1713373866572,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Проверка загрузки экрана авторизации",
+            "start": 1713373861109,
+            "stop": 1713373861109,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка элементтов экрана авторизации",
+            "start": 1713373862476,
+            "stop": 1713373862476,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка загрузки основного экраа",
+            "start": 1713373862906,
+            "stop": 1713373862906,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка полей основного экраа",
+            "start": 1713373865270,
+            "stop": 1713373865270,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "f6af9855-dd00-4d37-93ce-6b22e0fddde9",
+    "historyId": "b1baedad85e0acaef76298689ae821e2",
+    "fullName": "ru.iteco.fmhandroid.tests.AuthUnitTest.testAuthValidInfo",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.tests"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.tests.AuthUnitTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "testAuthValidInfo"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.tests.AuthUnitTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(2996)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}
