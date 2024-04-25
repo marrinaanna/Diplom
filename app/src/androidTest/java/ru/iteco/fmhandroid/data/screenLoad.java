@@ -21,7 +21,6 @@ public class screenLoad {
     OurMission ourMissionPage = new OurMission();
 
     public void readyAuthScreen() {
-        SystemClock.sleep(5000);
         try {
             authPage.checkLoadScreen();
             authPage.isAuthScreen();
@@ -31,20 +30,8 @@ public class screenLoad {
             authPage.isAuthScreen();
         }
     }
-    public void readyClaimsScreen() {
-        SystemClock.sleep(5000);
-        try {
-            mainScreenPage.checkMainScreenLoaded();
-            mainScreenPage.goToClaims();
-        } catch (Exception e) {
-            authPage.login();
-            mainScreenPage.goToClaims();
-        } finally {
-            claimsPage.checkClaimsScreenLoaded();
-        }
-    }
+
     public void readyControlPanelScreen() {
-        SystemClock.sleep(5000);
         try {
             mainScreenPage.checkMainScreenLoaded();
             mainScreenPage.goToNews();
@@ -58,7 +45,6 @@ public class screenLoad {
         }
     }
     public void readyMainScreen() {
-        SystemClock.sleep(5000);
         try {
             mainScreenPage.checkMainScreenLoaded();
         } catch (Exception e) {
@@ -68,7 +54,6 @@ public class screenLoad {
         }
     }
     public void readyNewsScreen() {
-        SystemClock.sleep(5000);
         try {
             mainScreenPage.checkMainScreenLoaded();
             mainScreenPage.goToNews();
@@ -80,7 +65,6 @@ public class screenLoad {
         }
     }
     public void readyAboutScreen() {
-        SystemClock.sleep(5000);
         try {
             mainScreenPage.checkMainScreenLoaded();
             mainScreenPage.goOurMission();

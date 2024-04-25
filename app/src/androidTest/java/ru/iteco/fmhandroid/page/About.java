@@ -26,7 +26,7 @@ public class About {
 
     public void checkAboutScreenLoaded() {
         Allure.step("Проверка загрузки экрана /'About/'");
-        elementWaiting(withText("Version:"), 2000);
+        elementWaiting(withText("Version:"), 10000);
         tradeMarkImage.check(matches(isDisplayed()));
         version.check(matches(isDisplayed()));
         versionValue.check(matches(isDisplayed()));

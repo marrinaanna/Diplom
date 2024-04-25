@@ -372,21 +372,4 @@ public class dataHelper {
             }
         };
     }
-    //    public static void waitUntilVisible(View view) {
-//        final CountDownLatch latch = new CountDownLatch(1);
-//        ViewTreeObserver observer = view.getViewTreeObserver();
-//        observer.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-//            @Override
-//            public void onGlobalLayout() {
-//                if (view.isShown()) {
-//                    latch.countDown();
-//                }
-//            }
-//        });
-//        try {
-//            latch.await();
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-//    }
 }

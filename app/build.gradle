@@ -54,8 +54,7 @@ android {
         }
     }
     packagingOptions {
-        exclude("META-INF/LICENSE.md")
-        exclude("META-INF/LICENSE-notice.md")
+        resources.excludes.add("META-INF/*")
     }
 }
 def aspectJVersion = '1.9.21'
@@ -81,7 +80,7 @@ dependencies {
     def hilt_version = '2.41'
     def gson_version = '2.9.0'
     def swipe_refresh_version = '1.1.0'
-
+    androidTestImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:$swipe_refresh_version"
@@ -119,5 +118,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.4.0'
     testImplementation platform("io.qameta.allure:allure-bom:$allureVersion")
     testImplementation "io.qameta.allure:allure-junit4"
+    androidTestImplementation "io.qameta.allure:allure-kotlin-android:2.4.0"
     agent "org.aspectj:aspectjweaver:$aspectJVersion"
 }

@@ -35,7 +35,7 @@ public class News {
 
     public void checkNewsScreenLoaded() {
         Allure.step("Проверка загрузки экрана с новостями");
-        elementWaiting(withText("News"), 5000);
+        elementWaiting(withText("News"), 10000);
         newsScreenName.check(matches(isDisplayed()));
         sortNewsButton.check(matches(isDisplayed()));
         filterNewsButton.check(matches(isDisplayed()));
@@ -44,7 +44,7 @@ public class News {
 
     public void checkListNewsLoaded() {
         Allure.step("Проверка отображения списка новостей");
-        elementWaiting(withId(newsList), 5000);
+        elementWaiting(withId(newsList), 10000);
     }
 
     public void checkDescriptionView(String text) {

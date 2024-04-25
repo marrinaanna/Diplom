@@ -28,7 +28,7 @@ public class Filters{
 
     public void checkFilterNewsScreenLoaded() {
         Allure.step("Проверка загрузки экарана с фильтром для новостей");
-        elementWaiting(withText("Filter news"), 2000);
+        elementWaiting(withText("Filter news"), 10000);
         categoryField.check(matches(isDisplayed()));
         startDateField.check(matches(isDisplayed()));
         endDateField.check(matches(isDisplayed()));

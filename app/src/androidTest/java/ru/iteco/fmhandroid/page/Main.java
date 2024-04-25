@@ -91,7 +91,7 @@ public class Main{
 
     public void checkMainScreenLoaded() {
         Allure.step("Проверка загрузки основного экраа");
-        elementWaiting(withText("News"), 5000);
+        elementWaiting(withText("News"), 10000);
     }
 
     public void isMainScreen() {

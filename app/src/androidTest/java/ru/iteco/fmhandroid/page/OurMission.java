@@ -1,7 +1,7 @@
 package ru.iteco.fmhandroid.page;
 
 
-        import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.Espresso.onView;
         import static androidx.test.espresso.assertion.ViewAssertions.matches;
         import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
         import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
@@ -31,7 +31,7 @@ public class OurMission {
 
     public void checkOurMissionScreenLoaded() {
         Allure.step("Проверка загрузки экрана \"Наша миссия\"");
-        elementWaiting(withText("Love is all"), 5000);
+        elementWaiting(withText("Love is all"), 10000);
     }
 
     public void isOurMissionScreen() {

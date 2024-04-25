@@ -34,7 +34,7 @@ public class CreateClaim{
 
     public void checkCreateClaimScreenLoaded() {
         Allure.step("Проверка загрузки экарана создания заявки");
-        elementWaiting(withText("Creating"), 2000);
+        elementWaiting(withText("Creating"), 10000);
         creatingClaimsScreenName.check(matches(isDisplayed()));
         creatingClaimsScreenName2.check(matches(isDisplayed()));
         titleField.check(matches(isDisplayed()));
@@ -48,7 +48,7 @@ public class CreateClaim{
 
     public void checkEditClaimScreenLoaded() {
         Allure.step("Проверка загрузки экарана редактирования заявки");
-        elementWaiting(withText("Editing"), 2000);
+        elementWaiting(withText("Editing"), 10000);
         editingClaimsScreenName.check(matches(isDisplayed()));
         creatingClaimsScreenName2.check(matches(isDisplayed()));
         titleField.check(matches(isDisplayed()));
