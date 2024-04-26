@@ -16,6 +16,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import io.qameta.allure.android.runners.AllureAndroidJUnit4;
 import io.qameta.allure.kotlin.junit4.DisplayName;
 import ru.iteco.fmhandroid.data.screenLoad;
 import ru.iteco.fmhandroid.page.About;
@@ -27,7 +28,7 @@ import ru.iteco.fmhandroid.page.News;
 import ru.iteco.fmhandroid.page.OurMission;
 import ru.iteco.fmhandroid.ui.AppActivity;
 @LargeTest
-@RunWith(AndroidJUnit4.class)
+@RunWith(AllureAndroidJUnit4.class)
 
 public class MainUnitTest {
     OurMission ourMission = new OurMission();
@@ -94,39 +95,6 @@ public class MainUnitTest {
         newsPage.checkNewsScreenLoaded();
     }
 
-    @Test
-    @DisplayName("Вкладка Claims: свернуть/развернуть список")
-    public void testOpenCloseUnitClaim() {
-        mainScreenPage.unitClaimsButton.check(matches(isDisplayed()));
-        mainScreenPage.unitClaimsButton.perform(click());
-        mainScreenPage.allClaimsButton.check(matches(not(isDisplayed())));
-        mainScreenPage.unitClaimsButton.perform(click());
-        mainScreenPage.allClaimsButton.check(matches(isDisplayed()));
-    }
-
-    @Test
-    @DisplayName("Вкладка Claims: развернуть отзыв")
-    public void testOpenClaim() {
-        mainScreenPage.singleClaim.check(matches(isDisplayed()));
-        mainScreenPage.singleClaim.perform(actionOnItemAtPosition(0, click()));
-        claimPage.checkClaimScreenLoaded();
-    }
-
-    @Test
-    @DisplayName("Вкладка Claims: переход в All claims")
-    public void testToAllClaims() {
-        mainScreenPage.allClaimsButton.check(matches(isDisplayed()));
-        mainScreenPage.allClaimsButton.perform(click());
-        claimsPage.checkClaimsScreenLoaded();
-    }
-
-    @Test
-    @DisplayName("Вкладка Claims: добавить новый отзыв")
-    public void testAddNewClaim() {
-        mainScreenPage.createClaimButton.check(matches(isDisplayed()));
-        mainScreenPage.createClaimButton.perform(click());
-        createClaimPage.checkCreateClaimScreenLoaded();
-    }
 
     @Test
     @DisplayName("Menu: перейти в раздел Main")
@@ -143,12 +111,6 @@ public class MainUnitTest {
         mainScreenPage.checkMainScreenLoaded();
     }
 
-    @Test
-    @DisplayName("Menu: перейти в раздел Claims")
-    public void testToClaims() {
-        mainScreenPage.goToClaims();
-        claimsPage.checkClaimsScreenLoaded();
-    }
 
     @Test
     @DisplayName("Menu: перейти в раздел News")

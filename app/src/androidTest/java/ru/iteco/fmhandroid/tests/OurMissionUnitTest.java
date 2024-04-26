@@ -16,12 +16,13 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import io.qameta.allure.android.runners.AllureAndroidJUnit4;
 import io.qameta.allure.kotlin.junit4.DisplayName;
 import ru.iteco.fmhandroid.data.screenLoad;
 import ru.iteco.fmhandroid.page.OurMission;
 import ru.iteco.fmhandroid.ui.AppActivity;
 @LargeTest
-@RunWith(AndroidJUnit4.class)
+@RunWith(AllureAndroidJUnit4.class)
 
 public class OurMissionUnitTest {
     OurMission ourMissionPage = new OurMission();

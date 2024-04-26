@@ -26,6 +26,7 @@ import org.junit.Test;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.runner.RunWith;
 
+import io.qameta.allure.android.runners.AllureAndroidJUnit4;
 import io.qameta.allure.kotlin.Description;
 import io.qameta.allure.kotlin.junit4.DisplayName;
 
@@ -38,7 +39,7 @@ import ru.iteco.fmhandroid.page.Filters;
 import ru.iteco.fmhandroid.page.News;
 import ru.iteco.fmhandroid.ui.AppActivity;
 @LargeTest
-@RunWith(AndroidJUnit4.class)
+@RunWith(AllureAndroidJUnit4.class)
 
 public class NewsUnitTest {
     News newsPage = new News();
